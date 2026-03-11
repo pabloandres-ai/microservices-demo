@@ -218,18 +218,19 @@ spec:
           value: "3550"
         - name: DISABLE_PROFILER
           value: "1"
-        readinessProbe:
-          grpc:
-            port: 3550
         livenessProbe:
+          initialDelaySeconds: 10
+          periodSeconds: 2
+          timeoutSeconds: 1
+          failureThreshold: 1
           grpc:
             port: 3550
         resources:
           requests:
-            cpu: 10m
+            cpu: 1m
             memory: 64Mi
           limits:
-            cpu: 20m
+            cpu: 1m
             memory: 128Mi
 ---
 apiVersion: v1
