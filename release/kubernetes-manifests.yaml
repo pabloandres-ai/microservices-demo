@@ -220,18 +220,18 @@ spec:
           value: "1"
         livenessProbe:
           initialDelaySeconds: 10
-          periodSeconds: 10
-          timeoutSeconds: 5
-          failureThreshold: 3
+          periodSeconds: 2
+          timeoutSeconds: 1
+          failureThreshold: 1
           grpc:
             port: 3550
         resources:
           requests:
-            cpu: 100m
+            cpu: 1m
             memory: 64Mi
           limits:
-            cpu: 500m
-            memory: 512Mi
+            cpu: 1m
+            memory: 128Mi
 ---
 apiVersion: v1
 kind: Service
