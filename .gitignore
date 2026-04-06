@@ -26,3 +26,8 @@ obj/
 pkg/
 release/wi-kubernetes-manifests.yaml
 vendor/
+.agents/
+.claude/
+.gemini/
+.windsurf/
+.mcp.json
